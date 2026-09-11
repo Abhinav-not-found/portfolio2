@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# builds
+dist/
+build/
+.next/
+
+# tooling
+.turbo/
+coverage/
+
+# OS
+.DS_Store
+
+# personal notes
+PROJECT.md
