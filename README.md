@@ -1,11 +1,12 @@
-
 ## Table of Contents
 
 - [Commit Guidelines](#commit-message-convention)
 - [License](#license)
 
 ## Folder Structure
+
 <!-- TREE:START -->
+
 ```text
 portfolio2/
 ├── .github
@@ -49,7 +50,81 @@ portfolio2/
 ├── PROJECT.md
 └── README.md
 ```
+
 <!-- TREE:END -->
+
+## Naming Conventions
+
+### Foldername
+
+_kebab-case_
+
+Example:
+
+```
+user-profile
+auth-service
+payment-gateway
+blog-editor
+api-client
+```
+
+### Filename & Variables
+
+_camelCase_
+
+```
+authController.js
+userService.js
+paymentGateway.js
+getUserProfile()
+createBlogPost()
+accessToken
+userProfile
+```
+
+### Class names
+
+_PascalCase_
+
+```
+class UserService {}
+class AuthController {}
+class PaymentGateway {}
+class BlogRepository {}
+```
+
+### Constants names
+
+_UPPER_SNAKE_CASE_
+
+```
+ACCESS_TOKEN
+REFRESH_TOKEN
+MAX_FILE_SIZE
+API_BASE_URL
+DEFAULT_PAGE_SIZE
+```
+
+### React Component names
+
+Reusable components: _small-kabab-case_
+
+```
+user-card.tsx
+login-btn.tsx
+search-bar.tsx
+```
+
+Page: _PascalCase_ with 'Page' suffix.
+
+```
+HomePage.tsx
+ProjectsPage.tsx
+AboutPage.tsx
+ContactPage.tsx
+ProjectDetailsPage.tsx
+```
 
 ## Commit Guidelines
 
@@ -82,7 +157,6 @@ We follow Conventional Commits.
 - chore: update dependencies
 - build: configure pnpm workspace
 - ci: add github actions workflow
-
 
 ## License
 
