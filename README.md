@@ -1,7 +1,59 @@
 ## Table of Contents
 
-- [Commit Guidelines](#commit-message-convention)
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Applications & Packages](#applications--packages)
+- [Folder Structure](#folder-structure)
+- [Naming Conventions](#naming-conventions)
+- [Commit Guidelines](#commit-guidelines)
 - [License](#license)
+
+## Description
+
+portfolio2 is a full-stack portfolio and content management platform built as a pnpm monorepo. The public portfolio is served through Next.js, while authenticated content management is handled through a separate React admin application.
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+### Admin
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB
+- Redis
+
+### Tooling
+
+- pnpm
+- ESLint
+- Prettier
+- GitHub Actions
+
+## Applications & Packages
+
+| Path          | Purpose                                 |
+| ------------- | --------------------------------------- |
+| `apps/client` | Public portfolio and SEO-focused pages  |
+| `apps/admin`  | Authenticated content management system |
+| `apps/server` | Backend API and business logic          |
+| `packages/ui` | Shared UI components and styling        |
+| `docs`        | Project documentation                   |
+| `scripts`     | Development and repository automation   |
 
 ## Folder Structure
 
