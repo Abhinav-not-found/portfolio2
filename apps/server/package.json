@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "generate:openapi": "tsx src/scripts/generate-openapi.ts",
+    "generate:client": "pnpm run generate:openapi && openapi --input ../../packages/api/openapi.json --output ../../packages/api/generated/client --client axios"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.99.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.5.1",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "tsx": "^4.23.13"
+  },
+  "dependencies": {
+    "@scalar/express-api-reference": "^0.10.18",
+    "express": "^5.2.1",
+    "swagger-jsdoc": "^6.3.0"
+  }
+}

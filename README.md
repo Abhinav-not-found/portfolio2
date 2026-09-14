@@ -1,11 +1,64 @@
-
 ## Table of Contents
 
-- [Commit Guidelines](#commit-message-convention)
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Applications & Packages](#applications--packages)
+- [Folder Structure](#folder-structure)
+- [Naming Conventions](#naming-conventions)
+- [Commit Guidelines](#commit-guidelines)
 - [License](#license)
 
+## Description
+
+portfolio2 is a full-stack portfolio and content management platform built as a pnpm monorepo. The public portfolio is served through Next.js, while authenticated content management is handled through a separate React admin application.
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+### Admin
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB
+- Redis
+
+### Tooling
+
+- pnpm
+- ESLint
+- Prettier
+- GitHub Actions
+
+## Applications & Packages
+
+| Path          | Purpose                                 |
+| ------------- | --------------------------------------- |
+| `apps/client` | Public portfolio and SEO-focused pages  |
+| `apps/admin`  | Authenticated content management system |
+| `apps/server` | Backend API and business logic          |
+| `packages/ui` | Shared UI components and styling        |
+| `docs`        | Project documentation                   |
+| `scripts`     | Development and repository automation   |
+
 ## Folder Structure
+
 <!-- TREE:START -->
+
 ```text
 portfolio2/
 ├── .github
@@ -49,7 +102,81 @@ portfolio2/
 ├── PROJECT.md
 └── README.md
 ```
+
 <!-- TREE:END -->
+
+## Naming Conventions
+
+### Foldername
+
+_kebab-case_
+
+Example:
+
+```
+user-profile
+auth-service
+payment-gateway
+blog-editor
+api-client
+```
+
+### Filename & Variables
+
+_camelCase_
+
+```
+authController.js
+userService.js
+paymentGateway.js
+getUserProfile()
+createBlogPost()
+accessToken
+userProfile
+```
+
+### Class names
+
+_PascalCase_
+
+```
+class UserService {}
+class AuthController {}
+class PaymentGateway {}
+class BlogRepository {}
+```
+
+### Constants names
+
+_UPPER_SNAKE_CASE_
+
+```
+ACCESS_TOKEN
+REFRESH_TOKEN
+MAX_FILE_SIZE
+API_BASE_URL
+DEFAULT_PAGE_SIZE
+```
+
+### React Component names
+
+Reusable components: _small-kabab-case_
+
+```
+user-card.tsx
+login-btn.tsx
+search-bar.tsx
+```
+
+Page: _PascalCase_ with 'Page' suffix.
+
+```
+HomePage.tsx
+ProjectsPage.tsx
+AboutPage.tsx
+ContactPage.tsx
+ProjectDetailsPage.tsx
+```
 
 ## Commit Guidelines
 
@@ -82,7 +209,6 @@ We follow Conventional Commits.
 - chore: update dependencies
 - build: configure pnpm workspace
 - ci: add github actions workflow
-
 
 ## License
 
